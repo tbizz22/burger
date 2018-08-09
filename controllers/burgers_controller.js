@@ -11,6 +11,7 @@ router.get("/", function (req, res) {
         var burgObject = {
             burg: data
         };
+        console.log(burgObject);
         // draw the page with the burg data
         res.render("index", burgObject);
     });
@@ -18,7 +19,10 @@ router.get("/", function (req, res) {
 
 
 router.post("/api/burger", function (req, res) {
-    burg.create(["burger"], [req.body.name], function (result) {
+    
+    console.log(req.body);
+    burg.create(["burger"], [req.body.burger], function (result) {
+        
         res.json({
             id: result.insertId
         });
