@@ -1,6 +1,5 @@
 -- seeds.sql
 USE burgers_db;
 
-INSERT INTO burger (burger) VALUES('Buffalo Bleu Burger');
-INSERT INTO burger (burger) VALUES('Bacon Cheeseburger');
-
+INSERT INTO burgers (burger,eaten) VALUES('Buffalo Bleu Burger',1);
+INSERT INTO burgers (burger,eaten) VALUES('Bacon Cheeseburger',0);
